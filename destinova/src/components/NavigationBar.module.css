@@ -1,0 +1,110 @@
+/* NavigationBar.module.css */
+
+/* Default transparent navbar */
+.custom-header {
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  /* Transparent background by default */
+  .custom-header.scrolled {
+    background-color: #343a40 !important; /* Dark background after scrolling */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: #f1c40f; /* Optional hover effect */
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .nav-links.active {
+    display: block; /* Show links when menu is active */
+  }
+  
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+/* NavigationBar.module.css */
+
+/* Default transparent navbar */
+.custom-header {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Transparent background by default */
+  .custom-header.scrolled {
+    background-color: #343a40 !important; /* Dark background after scrolling */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: #f1c40f; /* Optional hover effect */
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .nav-links.active {
+    display: block; /* Show links when menu is active */
+  }
+  
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+    
