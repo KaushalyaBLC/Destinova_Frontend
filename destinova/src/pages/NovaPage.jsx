@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./NovaPage.module.css";
-import NovaBot from "../assets/botimg/bot.png";
+import NovaBot from "../assets/botimg/bot.gif";
 import NavigationBar from "../components/NavigationBar.jsx";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
@@ -16,8 +16,8 @@ const NovaPage = () => {
       </div>
       <section className="d-flex align-items-center justify-content-center h-100 container">
         <div className="d-flex align-items-center justify-content-center  container">
-          <div className="col-lg-3">
-            <img src={NovaBot} width={250} />
+          <div className="col-lg-4 d-flex justify-content-center align-items-center">
+            <img src={NovaBot} width={350} />
           </div>
           <div
             className=" p-5 rounded-3 col-lg-8"

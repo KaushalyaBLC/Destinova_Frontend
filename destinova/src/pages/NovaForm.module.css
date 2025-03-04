@@ -1,5 +1,5 @@
 .novaform{
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -9,4 +9,17 @@
       rgba(0, 0, 0, 0.6)
     ),
     url("../assets/backgrounds/novapage.jpg");
+}
+
+.navigation{
+  height: 10vh;
+  display: block ;
+}
+
+.content{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
 }
