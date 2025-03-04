@@ -1,4 +1,4 @@
-.novapage{
+.novaform{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,14 +9,4 @@
       rgba(0, 0, 0, 0.6)
     ),
     url("../assets/backgrounds/novapage.jpg");
-}
-
-.introduction{
-    height: 90vh;
-    
-}
-
-.navigation{
-    height: 10vh;
-    display: block;
 }

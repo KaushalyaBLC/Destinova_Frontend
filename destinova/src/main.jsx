@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx';
 import NovaPage from './pages/NovaPage.jsx';
+import NovaForm from './pages/NovaForm.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,12 @@ const router = createBrowserRouter([
         <NovaPage/>
     ),
   },
-  
+  {
+    path: "/nova-form",
+    element: (
+        <NovaForm/>
+    ),
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
