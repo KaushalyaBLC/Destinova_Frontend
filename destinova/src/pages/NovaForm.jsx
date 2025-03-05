@@ -3,6 +3,11 @@ import NavigationBar from "../components/NavigationBar";
 import style from "./NovaForm.module.css";
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
+import Form3 from "../components/Form3";
+import Form4 from "../components/Form4";
+import Form5 from "../components/Form5";
+import Form6 from "../components/Form6";
+import Form7 from "../components/Form7";
 import Footer from "../components/Footer";
 
 const NovaForm = () => {
@@ -14,8 +19,9 @@ const NovaForm = () => {
     bday: "",
     education: "",
   });
+
   const [educationDetails, setEducationDetails] = useState({
-    ol:{
+    ol: {
       subject1: {
         subject: "",
         grade: "",
@@ -53,8 +59,8 @@ const NovaForm = () => {
         grade: "",
       },
     },
-    preal:"",
-    al:{
+    preal: "",
+    al: {
       subject1: {
         subject: "",
         grade: "",
@@ -68,7 +74,25 @@ const NovaForm = () => {
         grade: "",
       },
     },
-    degree:"",
+    degree: "",
+  });
+
+  const [answers , setAnswers] = useState({
+    answer1: "",
+    answer2: "",
+    answer3: "",
+    answer4: "",
+    answer5: "",
+    answer6: "",
+    answer7: "",
+    answer8: "",
+    answer9: "",
+    answer10: "",
+    answer11: "",
+    answer12: "",
+    answer13: "",
+    answer14: "",
+    answer15: "",
   });
 
   return (
@@ -85,18 +109,57 @@ const NovaForm = () => {
               setFormPage={setFormPage}
             />
           )}
-          {formPage ===  2 && (
+          {formPage === 2 && (
             <Form2
-
               personalData={personalData}
               educationDetails={educationDetails}
               setEducationDetails={setEducationDetails}
               setFormPage={setFormPage}
             />
           )}
+          {formPage === 3 && (
+            <Form3
+              personalData={personalData}
+              answers={answers}
+              setAnswers={setAnswers}
+              setFormPage={setFormPage}
+            />
+          )}
+          {formPage === 4 && (
+            <Form4
+              personalData={personalData}
+              answers={answers}
+              setAnswers={setAnswers}
+              setFormPage={setFormPage}
+            />
+          )}
+          {formPage === 5 && (
+            <Form5
+              personalData={personalData}
+              answers={answers}
+              setAnswers={setAnswers}
+              setFormPage={setFormPage}
+            />
+          )}
+          {formPage === 6 && (
+            <Form6
+              personalData={personalData}
+              answers={answers}
+              setAnswers={setAnswers}
+              setFormPage={setFormPage}
+            />
+          )}
+          {formPage === 7 && (
+            <Form7
+              personalData={personalData}
+              answers={answers}
+              setAnswers={setAnswers}
+              setFormPage={setFormPage}
+            />
+          )}
           {/* Future forms (Form2, Form3, etc.) will be added here */}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

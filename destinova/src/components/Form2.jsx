@@ -56,6 +56,11 @@ const Form2 = ({
       >
         <h2 className="text-danger text-center">Education Information</h2>
         <form onSubmit={handleSubmit}>
+          {personalData.education === "preol" && (
+            setFormPage(3)
+          )}
+
+
           {personalData.education === "ol" && (
             <div className="d-flex flex-column align-items-center mt-3">
               <h5>Ordinary Level (O/L)</h5>
