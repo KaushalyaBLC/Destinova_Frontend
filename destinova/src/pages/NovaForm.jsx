@@ -9,6 +9,9 @@ import Form5 from "../components/Form5";
 import Form6 from "../components/Form6";
 import Form7 from "../components/Form7";
 import Footer from "../components/Footer";
+import NovaResult from "../services/NovaResult";
+import ResultBot from "../assets/botimg/result.gif";
+import Typewriter from "typewriter-effect";
 
 const NovaForm = () => {
   const [formPage, setFormPage] = useState(1);
@@ -95,6 +98,12 @@ const NovaForm = () => {
     answer15: "",
   });
 
+  const [results, setResults] = useState(null);
+
+  const handleAPI = () => {
+    NovaResult(personalData, educationDetails, answers, setResults);
+  };
+
   return (
     <>
       <div className={style.novaform}>
@@ -157,8 +166,28 @@ const NovaForm = () => {
               setFormPage={setFormPage}
             />
           )}
-          {/* Future forms (Form2, Form3, etc.) will be added here */}
+          {formPage === 8 && (() => { handleAPI(); return null; })()}
+          {formPage === 8 && !results && (
+          <>
+            <div >
+              <h6 className="text-light text-center"> <Typewriter
+          options={{
+            strings: [
+              'Please Wait!',
+              'Your results are on the way....'
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 1,
+          }}
+        /></h6>
+              <img src={ResultBot} alt="" width={300}/>
+            </div>
+          </>
+        )}
         </div>
+        
         <Footer />
       </div>
     </>
