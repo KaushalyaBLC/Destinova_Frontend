@@ -9,11 +9,15 @@ import Form5 from "../components/Form5";
 import Form6 from "../components/Form6";
 import Form7 from "../components/Form7";
 import Footer from "../components/Footer";
+import NovaResultDisplay from "../components/NovaResultDisplay";
 import NovaResult from "../services/NovaResult";
 import ResultBot from "../assets/botimg/result.gif";
 import Typewriter from "typewriter-effect";
+import { useEffect } from "react";
 
 const NovaForm = () => {
+ 
+
   const [formPage, setFormPage] = useState(1);
   const [personalData, setPersonalData] = useState({
     name: "",
@@ -22,6 +26,7 @@ const NovaForm = () => {
     bday: "",
     education: "",
   });
+ 
 
   const [educationDetails, setEducationDetails] = useState({
     ol: {
@@ -100,10 +105,17 @@ const NovaForm = () => {
 
   const [results, setResults] = useState(null);
 
+ 
+
   const handleAPI = () => {
     NovaResult(personalData, educationDetails, answers, setResults);
   };
 
+  useEffect(() => {
+    if (formPage === 8 && !results) {
+      handleAPI();
+    }
+  }, [formPage, results]);
   return (
     <>
       <div className={style.novaform}>
@@ -166,7 +178,7 @@ const NovaForm = () => {
               setFormPage={setFormPage}
             />
           )}
-          {formPage === 8 && (() => { handleAPI(); return null; })()}
+    
           {formPage === 8 && !results && (
           <>
             <div >
@@ -185,6 +197,9 @@ const NovaForm = () => {
               <img src={ResultBot} alt="" width={300}/>
             </div>
           </>
+        )}
+        {formPage === 8 && results && (
+          <NovaResultDisplay results={results} />
         )}
         </div>
         
