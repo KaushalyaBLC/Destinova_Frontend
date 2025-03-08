@@ -5,6 +5,7 @@ import NavigationBar from "../components/NavigationBar.jsx";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
+
 const NovaPage = () => {
   const navigator = useNavigate();
   return (
@@ -43,7 +44,7 @@ const NovaPage = () => {
                 <li><span className="text-warning">Tailored Career Recommendations  :</span> Explore careers that align with your unique profile.</li>
               </ul>
               <div className="d-flex justify-content-center">
-                <button className="btn btn-danger p-2 px-4 mt-3 " onClick={() => {navigator("/nova-form")}}>
+                <button className="btn btn-danger p-2 px-4 mt-3 " onClick={() => {navigator("/meet-nova/form")}}>
                   Start Now
                 </button>
               </div>

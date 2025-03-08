@@ -86,7 +86,7 @@ const HomePage = () => {
                 </b>
               </div>
 
-              <button className="btn btn-danger p-2 px-4 mt-3" onClick={()=>navigator("/meet-nova")}>
+              <button className="btn btn-danger p-2 px-4 mt-3" onClick={()=>navigator("/meet-nova/form")}>
                 Meet Nova
               </button>
             </div>

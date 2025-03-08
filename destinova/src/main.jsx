@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/nova-form",
+    path: "meet-nova/form",
     element: (
         <NovaForm/>
     ),

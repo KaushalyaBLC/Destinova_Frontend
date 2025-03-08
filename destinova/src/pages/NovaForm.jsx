@@ -14,9 +14,21 @@ import NovaResult from "../services/NovaResult";
 import ResultBot from "../assets/botimg/result.gif";
 import Typewriter from "typewriter-effect";
 import { useEffect } from "react";
+import axios from "axios";
 
 const NovaForm = () => {
  
+  const [ip, setIp] = useState("Fetching...");
+
+  useEffect(() => {
+    axios.get("https://api64.ipify.org?format=json")
+      .then((response) => { 
+        const fetchedIp = response.data.ip;
+        setIp(fetchedIp); 
+        setPersonalData(prevData => ({ ...prevData, ip: fetchedIp }));
+      })
+      .catch((error) => console.error("Error fetching IP:", error));
+  }, []);
 
   const [formPage, setFormPage] = useState(1);
   const [personalData, setPersonalData] = useState({
@@ -25,6 +37,7 @@ const NovaForm = () => {
     telNo: "",
     bday: "",
     education: "",
+    ip: "",
   });
  
 
@@ -108,7 +121,7 @@ const NovaForm = () => {
  
 
   const handleAPI = () => {
-    NovaResult(personalData, educationDetails, answers, setResults);
+    NovaResult(personalData, educationDetails, answers, ip, setResults);
   };
 
   useEffect(() => {
