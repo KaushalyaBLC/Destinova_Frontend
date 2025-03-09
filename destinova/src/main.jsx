@@ -14,6 +14,7 @@ import HomePage from './pages/HomePage.jsx';
 import NovaPage from './pages/NovaPage.jsx';
 import NovaForm from './pages/NovaForm.jsx';
 import CareerVision from './pages/CareerVision.jsx';
+import Industry from './components/Industry.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,12 @@ const router = createBrowserRouter([
     path: "career-vision",
     element: (
         <CareerVision/>
+    ),
+  },
+  {
+    path: "career-vision/:industry",
+    element: (
+        <Industry/>
     ),
   }
 ]);

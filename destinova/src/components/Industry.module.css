@@ -1,0 +1,83 @@
+.agriculture{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../assets/industry/agriculture.jpg");
+}
+.apparel{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/industry/apparel.jpg");
+}
+.tourism{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/industry/tourism.jpg");
+}
+
+.it{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/industry/it.jpg");
+}
+
+.manufacturing{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../assets/industry/manufacturing.jpg");
+}
+
+.construction{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   overflow: hidden;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../assets/industry/construction.jpg");
+}
+.content{
+    min-height: 90vh;
+    margin-top: 20vh;
+}
+
+p{
+    text-align: justify ;
+}
