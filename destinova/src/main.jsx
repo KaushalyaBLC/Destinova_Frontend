@@ -13,6 +13,7 @@ import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx';
 import NovaPage from './pages/NovaPage.jsx';
 import NovaForm from './pages/NovaForm.jsx';
+import CareerVision from './pages/CareerVision.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,12 @@ const router = createBrowserRouter([
     path: "meet-nova/form",
     element: (
         <NovaForm/>
+    ),
+  },
+  {
+    path: "career-vision",
+    element: (
+        <CareerVision/>
     ),
   }
 ]);

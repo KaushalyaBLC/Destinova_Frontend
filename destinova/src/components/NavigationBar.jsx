@@ -46,15 +46,13 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/meet-nova" className="nav-link">
               Meet Nova
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/careers" className="nav-link">
-              Discover Job Market
+            <Nav.Link as={NavLink} to="/career-vision" className="nav-link">
+              Career Vision Crystal
             </Nav.Link>
             <Nav.Link as={NavLink} to="/education" className="nav-link">
               Academic Networking
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/skill" className="nav-link">
-              Soft Skill Development
-            </Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </div>
