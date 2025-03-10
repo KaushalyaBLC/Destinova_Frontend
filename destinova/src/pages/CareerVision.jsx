@@ -9,10 +9,12 @@ import { FaComputer } from "react-icons/fa6";
 import { MdFactory } from "react-icons/md";
 import { IoIosConstruct } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const CareerVision = () => {
     const navigate = useNavigate();
   return (
+    <>
     <div className={styles.page}>
       <div className="d-block">
         <NavigationBar />
@@ -99,6 +101,8 @@ const CareerVision = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
