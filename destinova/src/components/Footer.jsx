@@ -47,7 +47,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="text-center text-secondary border-secondary mt-4 border-top pt-3">
-          <p className="pb-3 mb-0 ">© {new Date().getFullYear()} Destinova. All Rights Reserved.</p>
+          <p className="pb-3 mb-0 text-center ">© {new Date().getFullYear()} Destinova. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

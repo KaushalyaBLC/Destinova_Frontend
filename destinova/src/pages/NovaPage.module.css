@@ -1,5 +1,6 @@
 .novapage{
-    height: 100vh;
+    min-height: 100vh;
+    margin-top: 10vh;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;

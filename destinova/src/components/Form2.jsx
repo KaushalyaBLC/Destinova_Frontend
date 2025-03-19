@@ -49,7 +49,7 @@ const Form2 = ({
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-100 container">
+    <div className="d-lg-flex align-items-center justify-content-center h-100 container">
       <div
         className="p-5 rounded-3 col-lg-6"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
@@ -162,7 +162,7 @@ const Form2 = ({
 
           {personalData.education === "degree" && (
             <>
-              <h5 className="mt-2">Higher Education</h5>
+              <h5 className="mt-2">Degree</h5>
               <input
                 type="text"
                 name="degree"
@@ -189,7 +189,7 @@ const Form2 = ({
         </form>
       </div>
       <div className="col-lg-1"></div>
-      <div className="col-lg-4 text-light text-center">
+      <div className="col-lg-4 text-light text-center mt-4">
         <Typewriter
           options={{
             strings: [

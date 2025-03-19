@@ -15,6 +15,9 @@ import NovaPage from './pages/NovaPage.jsx';
 import NovaForm from './pages/NovaForm.jsx';
 import CareerVision from './pages/CareerVision.jsx';
 import Industry from './components/Industry.jsx';
+import ClusterPage from './pages/ClusterPage.jsx';
+import WisdomGateway from './pages/WisdomGateway.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +48,20 @@ const router = createBrowserRouter([
     element: (
         <Industry/>
     ),
-  }
+  },
+  {
+    path: "career-vision/industry/:cluster",
+    element: (
+        <ClusterPage/>  
+    ),
+  },
+  {
+    path: "wisdom-gateway",
+    element: (
+        <WisdomGateway/>
+    ),
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

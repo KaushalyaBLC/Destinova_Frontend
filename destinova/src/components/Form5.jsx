@@ -18,26 +18,10 @@ const Form5 = ({ answers, setAnswers, personalData, setFormPage }) => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-100 container">
-      <div className="col-lg-4 text-light text-center">
-        <Typewriter
-          options={{
-            strings: [
-             
-              "Let's explore your interests and passions! 💡",
-              "Your passion for certain subjects reveals so much about your potential.",
-              "Share what excites you, and let's dive deep into your strengths! 🚀",
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 75,
-            deleteSpeed: 1,
-          }}
-        />
-        <img src={academicBot} alt="Nova Bot" width="300" />
-      </div>
+    <div className="d-lg-flex flex-row-reverse align-items-center justify-content-center h-100 container mt-5 mt-lg-1">
+      
 
-      <div className="col-lg-1"></div>
+     
 
       <div
         className="p-5 rounded-3 col-lg-6"
@@ -107,6 +91,26 @@ const Form5 = ({ answers, setAnswers, personalData, setFormPage }) => {
             </button>
           </div>
         </form>
+      </div>
+
+      <div className="col-lg-1"></div>
+
+      <div className="col-lg-4 text-light text-center mt-3">
+        <Typewriter
+          options={{
+            strings: [
+             
+              "Let's explore your interests and passions! 💡",
+              "Your passion for certain subjects reveals so much about your potential.",
+              "Share what excites you, and let's dive deep into your strengths! 🚀",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 1,
+          }}
+        />
+        <img src={academicBot} alt="Nova Bot" width="300" />
       </div>
     </div>
   );

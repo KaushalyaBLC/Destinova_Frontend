@@ -18,28 +18,7 @@ const Form6 = ({ answers, setAnswers, personalData, setFormPage }) => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-100 container">
-      <div className="col-lg-4 text-light text-center">
-        <Typewriter
-          options={{
-            strings: [
-              `You come to the end of the questions ${personalData.name}! 🎉`,
-              "Now, let's dive into your career interests and work preferences! 💼",
-              "Understanding your ideal job environment helps me guide you to the right career path.",
-              "Do you prefer teamwork or independent work? A flexible schedule or structured routine?",
-              "Share your thoughts, and let's map out the career that aligns with your strengths! 💡",
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 75,
-            deleteSpeed: 1,
-          }}
-        />
-        <img src={academicBot} alt="Nova Bot" width="300" />
-      </div>
-
-      <div className="col-lg-1"></div>
-
+    <div className="d-lg-flex flex-row-reverse align-items-center justify-content-center h-100 container mt-5 mt-lg-1">
       <div
         className="p-5 rounded-3 col-lg-6"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
@@ -97,6 +76,25 @@ const Form6 = ({ answers, setAnswers, personalData, setFormPage }) => {
             </button>
           </div>
         </form>
+      </div>
+      <div className="col-lg-1"></div>
+      <div className="col-lg-4 text-light text-center mt-4">
+        <Typewriter
+          options={{
+            strings: [
+              `You come to the end of the questions ${personalData.name}! 🎉`,
+              "Now, let's dive into your career interests and work preferences! 💼",
+              "Understanding your ideal job environment helps me guide you to the right career path.",
+              "Do you prefer teamwork or independent work? A flexible schedule or structured routine?",
+              "Share your thoughts, and let's map out the career that aligns with your strengths! 💡",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 1,
+          }}
+        />
+        <img src={academicBot} alt="Nova Bot" width="300" />
       </div>
     </div>
   );

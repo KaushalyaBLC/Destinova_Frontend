@@ -16,10 +16,8 @@ const NovaPage = () => {
         <NavigationBar />
       </div>
       <section className="d-flex align-items-center justify-content-center h-100 container">
-        <div className="d-flex align-items-center justify-content-center  container">
-          <div className="col-lg-4 d-flex justify-content-center align-items-center">
-            <img src={NovaBot} width={350} />
-          </div>
+        <div className="d-lg-flex flex-row-reverse align-items-center justify-content-center  container">
+         
           <div
             className=" p-5 rounded-3 col-lg-8"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Reduced opacity only for the background
@@ -49,6 +47,9 @@ const NovaPage = () => {
                 </button>
               </div>
             </div>
+          </div>
+           <div className="col-lg-4  d-flex justify-content-center align-items-center">
+            <img src={NovaBot} width={300} />
           </div>
         </div>
       </section>

@@ -18,26 +18,9 @@ const Form3 = ({ answers, setAnswers, personalData, setFormPage }) => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-100 container">
-      <div className="col-lg-4 text-light text-center">
-        <Typewriter
-          options={{
-            strings: [
-              `OK ${personalData.name}`,
-              "Let's dive into your academic and technical skills! 📚💻",
-              "Your strengths in subjects and tech expertise help me understand your potential.",
-              "Don't worry, just share your experiences, and I'll do the rest! 😊"
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 75,
-            deleteSpeed: 1,
-          }}
-        />
-        <img src={academicBot} alt="Nova Bot" width="300" />
-      </div>
+    <div className="d-lg-flex align-items-center justify-content-center h-100 container">
+      
 
-      <div className="col-lg-1"></div>
 
       <div
         className="p-5 rounded-3 col-lg-6"
@@ -119,6 +102,26 @@ const Form3 = ({ answers, setAnswers, personalData, setFormPage }) => {
             </button>
           </div>
         </form>
+      </div>
+
+      <div className="col-lg-1"></div>
+
+      <div className="col-lg-4 text-light text-center mt-3">
+        <Typewriter
+          options={{
+            strings: [
+              `OK ${personalData.name}`,
+              "Let's dive into your academic and technical skills! 📚💻",
+              "Your strengths in subjects and tech expertise help me understand your potential.",
+              "Don't worry, just share your experiences, and I'll do the rest! 😊"
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 1,
+          }}
+        />
+        <img src={academicBot} alt="Nova Bot" width="300" />
       </div>
     </div>
   );

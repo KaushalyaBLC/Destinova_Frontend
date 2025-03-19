@@ -18,28 +18,7 @@ const Form6 = ({ answers, setAnswers, personalData, setFormPage }) => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-100 container">
-      <div className="col-lg-4 text-light text-center">
-        <Typewriter
-          options={{
-            strings: [
-              `You are almost done ${personalData.name}! 🎉`,
-              "Let's take a look at your extra-curricular activities! 🏅",
-              "Beyond academics, these activities show your leadership, creativity, and teamwork skills.",
-              "Whether it's sports, arts, or volunteering, it's all about passion and growth! 🌱",
-              "Share your experiences, and let's celebrate your diverse talents! 💪",
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 75,
-            deleteSpeed: 1,
-          }}
-        />
-        <img src={academicBot} alt="Nova Bot" width="300" />
-      </div>
-
-      <div className="col-lg-1"></div>
-
+    <div className="d-lg-flex align-items-center justify-content-center h-100 container mt-5 mt-lg-1">
       <div
         className="p-5 rounded-3 col-lg-6"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
@@ -122,6 +101,25 @@ const Form6 = ({ answers, setAnswers, personalData, setFormPage }) => {
             </button>
           </div>
         </form>
+      </div>
+      <div className="col-lg-1"></div>
+      <div className="col-lg-4 text-light text-center mt-4">
+        <Typewriter
+          options={{
+            strings: [
+              `You are almost done ${personalData.name}! 🎉`,
+              "Let's take a look at your extra-curricular activities! 🏅",
+              "Beyond academics, these activities show your leadership, creativity, and teamwork skills.",
+              "Whether it's sports, arts, or volunteering, it's all about passion and growth! 🌱",
+              "Share your experiences, and let's celebrate your diverse talents! 💪",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 1,
+          }}
+        />
+        <img src={academicBot} alt="Nova Bot" width="300" />
       </div>
     </div>
   );

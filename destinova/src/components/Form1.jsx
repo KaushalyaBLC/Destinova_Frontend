@@ -17,27 +17,7 @@ const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
 
   return (
     <>
-      <div className="d-flex align-items-center justify-content-center h-100 container">
-        <div className="col-lg-4 text-light text-center">
-          <Typewriter
-            options={{
-              strings: [
-                "Hello there! 👋 I’m Nova, your AI career guide.",
-                "I’ll ask you a few questions to understand your passions, skills, and goals.",
-                "Ready to begin?",
-                "Great! Let’s start with the basics.",
-              ],
-              autoStart: true,
-              loop: false,
-              delay: 75,
-              deleteSpeed: 1,
-            }}
-          />
-          <img src={WaitingBot} alt="Nova Bot" width="300" />
-        </div>
-
-        <div className="col-lg-1"></div>
-
+      <div className="d-lg-flex flex-row-reverse align-items-center justify-content-center h-100 container mt-5 mt-lg-1">
         <div
           className="p-5 rounded-3 col-lg-6"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
@@ -128,7 +108,8 @@ const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
                   <option value="preal">Following GCE A/L</option>
                   <option value="al">Completed GCE A/L</option>
                   <option value="degree">
-                    Following or Completed a Bachelor | Master | PhD Degree Program
+                    Following or Completed a Bachelor | Master | PhD Degree
+                    Program
                   </option>
                 </select>
               </div>
@@ -148,6 +129,24 @@ const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
               </button>
             </div>
           </form>
+        </div>
+        <div className="col-lg-1"></div>
+        <div className="col-lg-4 text-light text-center mt-4">
+          <Typewriter
+            options={{
+              strings: [
+                "Hello there! 👋 I’m Nova, your AI career guide.",
+                "I’ll ask you a few questions to understand your passions, skills, and goals.",
+                "Ready to begin?",
+                "Great! Let’s start with the basics.",
+              ],
+              autoStart: true,
+              loop: false,
+              delay: 75,
+              deleteSpeed: 1,
+            }}
+          />
+          <img src={WaitingBot} alt="Nova Bot" width={300} />
         </div>
       </div>
     </>

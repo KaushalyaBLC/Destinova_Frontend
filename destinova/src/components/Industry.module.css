@@ -1,100 +1,101 @@
-.agriculture{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)
-    ),
-    url("../assets/industry/agriculture.jpg");
-}
-.apparel{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../assets/industry/apparel.jpg");
-}
-.tourism{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../assets/industry/tourism.jpg");
+/* General styles for background images */
+.agriculture, .apparel, .tourism, .it, .manufacturing, .construction {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fixes the background while scrolling */
+  overflow: hidden;
 }
 
-.it{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../assets/industry/it.jpg");
+/* Individual background images with gradient overlays */
+.agriculture {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url("../assets/industry/agriculture.jpg");
 }
 
-.manufacturing{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../assets/industry/manufacturing.jpg");
+.apparel {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url("../assets/industry/apparel.jpg");
 }
 
-.construction{
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-   overflow: hidden;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)
-    ),
-    url("../assets/industry/construction.jpg");
-}
-.content{
-    min-height: 90vh;
-    margin-top: 20vh;
-    margin-bottom: 5vh;
+.tourism {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url("../assets/industry/tourism.jpg");
 }
 
-p{
-    text-align: justify ;
+.it {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url("../assets/industry/it.jpg");
 }
 
-.cluster{
-    border: 2px solid white;
-    padding: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease-in-out;
+.manufacturing {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url("../assets/industry/manufacturing.jpg");
 }
 
-.cluster:hover{
-    background-color: black;
+.construction {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url("../assets/industry/construction.jpg");
+}
+
+/* Content section */
+.content {
+  min-height: 90vh;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+}
+
+/* Text styling */
+p {
+  text-align: justify;
+  color: white;
+}
+
+/* Cluster box styling */
+.cluster {
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cluster:hover {
+  background-color: black;
+}
+
+/* General body styling */
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
 }
