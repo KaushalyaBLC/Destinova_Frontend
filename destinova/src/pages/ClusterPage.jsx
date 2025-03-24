@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ClusterPage.module.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import NavigationBar from "../components/NavigationBar";
 import Footer from '../components/Footer'
@@ -10,6 +10,8 @@ const ClusterPage = () => {
   const [clusterData, setClusterData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
@@ -104,7 +106,7 @@ const ClusterPage = () => {
                   Popular Careers
                 </h4>
                 {clusterData?.career_paths?.map((career) => (
-                  <div key={career._id} className="mt-3">
+                  <div key={career._id} className={styles.career} onClick={()=>{navigate(`${career.title}`)}}>
                     <h5>{career.title}</h5>
                     <p>{career.description}</p>
                   </div>

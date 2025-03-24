@@ -10,6 +10,7 @@ import { MdFactory } from "react-icons/md";
 import { IoIosConstruct } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import CareerBot from "../components/CareerBot";
 
 const CareerVision = () => {
     const navigate = useNavigate();
@@ -32,10 +33,12 @@ const CareerVision = () => {
               student or a professional, make informed career decisions with
               confidence!
             </p>
+           
             <div className="text-light d-flex  align-items-center">
               <p className="my-auto me-2">Select an Industry to Explore</p>
               <FaArrowRight />
             </div>
+            <CareerBot/>
           </div>
           <div className="col-lg-1"></div>
           <div className="col-lg-7">
