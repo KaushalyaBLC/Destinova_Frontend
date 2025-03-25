@@ -17,6 +17,7 @@ import CareerVision from './pages/CareerVision.jsx';
 import Industry from './components/Industry.jsx';
 import ClusterPage from './pages/ClusterPage.jsx';
 import WisdomGateway from './pages/WisdomGateway.jsx';
+import CareerResult from './pages/CareerResult.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,12 @@ const router = createBrowserRouter([
     path: "career-vision/industry/:cluster",
     element: (
         <ClusterPage/>  
+    ),
+  },
+  {
+    path: "career-vision/career/:career",
+    element: (
+        <CareerResult/>  
     ),
   },
   {

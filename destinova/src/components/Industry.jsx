@@ -4,6 +4,7 @@ import NavigationBar from "../components/NavigationBar";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "./Footer";
+import CareerBot from "./CareerBot";
 
 const Industry = () => {
   const { industry } = useParams();
@@ -100,6 +101,7 @@ const Industry = () => {
           </div>
         </div>
       </div>
+      <CareerBot/>
       <Footer />
     </>
   );

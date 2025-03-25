@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import NavigationBar from "../components/NavigationBar";
 import Footer from '../components/Footer'
+import CareerBot from "../components/CareerBot";
 
 const ClusterPage = () => {
   const { cluster } = useParams();
@@ -106,7 +107,7 @@ const ClusterPage = () => {
                   Popular Careers
                 </h4>
                 {clusterData?.career_paths?.map((career) => (
-                  <div key={career._id} className={styles.career} onClick={()=>{navigate(`${career.title}`)}}>
+                  <div key={career._id} className={styles.career} onClick={()=>{navigate(`/career-vision/career/${career.title}`)}}>
                     <h5>{career.title}</h5>
                     <p>{career.description}</p>
                   </div>
@@ -146,6 +147,7 @@ const ClusterPage = () => {
           </div>
         </div>
       </div>
+      <CareerBot/>
       <Footer/>
     </div>
   );
