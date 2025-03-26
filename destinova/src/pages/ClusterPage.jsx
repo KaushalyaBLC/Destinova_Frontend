@@ -3,8 +3,9 @@ import styles from "./ClusterPage.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import NavigationBar from "../components/NavigationBar";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 import CareerBot from "../components/CareerBot";
+import { Nav } from "react-bootstrap";
 
 const ClusterPage = () => {
   const { cluster } = useParams();
@@ -12,11 +13,11 @@ const ClusterPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/crystal/cluster/${cluster}`)
+      .get(`https://destinova-backend.fly.dev/crystal/cluster/${cluster}`)
       .then((response) => {
         setClusterData(response.data);
         setLoading(false);
@@ -30,9 +31,13 @@ const ClusterPage = () => {
 
   if (loading) {
     return (
-      <div className={styles.loading}>
-        <h2>Loading...</h2>
-      </div>
+      <>
+        <NavigationBar />
+        <div className={`${styles.content} container`}>
+          <p>Loading...</p>
+        </div>
+        <Footer />
+      </>
     );
   }
 
@@ -49,7 +54,7 @@ const ClusterPage = () => {
       <NavigationBar />
       <div className={styles.content}>
         <div className="container">
-          <div className="d-flex">
+          <div className="d-lg-flex ">
             {/* Left Section */}
             <div className="col-lg-5">
               <h2>{clusterData?.name}</h2>
@@ -107,39 +112,54 @@ const ClusterPage = () => {
                   Popular Careers
                 </h4>
                 {clusterData?.career_paths?.map((career) => (
-                  <div key={career._id} className={styles.career} onClick={()=>{navigate(`/career-vision/career/${career.title}`)}}>
+                  <div
+                    key={career._id}
+                    className={styles.career}
+                    onClick={() => {
+                      navigate(`/career-vision/career/${career.title}`);
+                    }}
+                  >
                     <h5>{career.title}</h5>
                     <p>{career.description}</p>
                   </div>
                 ))}
               </div>
               <div>
-              <h4 className="border border-light p-2 border-2 rounded">
+                <h4 className="border border-light p-2 border-2 rounded">
                   Skills Required
                 </h4>
                 {clusterData?.skills_required?.map((skill) => (
                   <div key={skill._id} className="mt-3">
-                    <p><b>{skill.title}: </b>{skill.description}</p>
+                    <p>
+                      <b>{skill.title}: </b>
+                      {skill.description}
+                    </p>
                   </div>
                 ))}
               </div>
               <div>
-              <h4 className="border border-light p-2 border-2 rounded">
+                <h4 className="border border-light p-2 border-2 rounded">
                   Future Trends
                 </h4>
                 {clusterData?.future_trends?.map((trend) => (
                   <div key={trend._id} className="mt-3">
-                    <p><b>{trend.title}: </b>{trend.description}</p>
+                    <p>
+                      <b>{trend.title}: </b>
+                      {trend.description}
+                    </p>
                   </div>
                 ))}
               </div>
               <div>
-              <h4 className="border border-light p-2 border-2 rounded">
+                <h4 className="border border-light p-2 border-2 rounded">
                   Opportunities
                 </h4>
                 {clusterData?.opportunities?.map((opportunity) => (
                   <div key={opportunity._id} className="mt-3">
-                    <p><b>{opportunity.title}: </b>{opportunity.description}</p>
+                    <p>
+                      <b>{opportunity.title}: </b>
+                      {opportunity.description}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -147,8 +167,8 @@ const ClusterPage = () => {
           </div>
         </div>
       </div>
-      <CareerBot/>
-      <Footer/>
+      <CareerBot />
+      <Footer />
     </div>
   );
 };

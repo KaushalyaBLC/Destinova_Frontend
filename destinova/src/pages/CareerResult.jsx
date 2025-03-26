@@ -6,6 +6,7 @@ import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import BotImg from "../assets/botimg/waitingbot.gif";
 import Typewriter from "typewriter-effect";
+import CareerBot from "../components/CareerBot";
 
 const CareerResult = () => {
   const [careerData, setCareerData] = useState(null);
@@ -16,7 +17,7 @@ const CareerResult = () => {
     const fetchCareerData = async () => {
       try {
         console.log("Fetching career data for:", career);
-        const response = await axios.get(`http://localhost:3000/crystal/career/${career}`);
+        const response = await axios.get(`https://destinova-backend.fly.dev/crystal/career/${career}`);
         setCareerData((prevData) =>
           JSON.stringify(prevData) !== JSON.stringify(response.data) ? response.data : prevData
         );
@@ -200,8 +201,10 @@ const CareerResult = () => {
             </div>
           )}
         </div>
+
       </div>
       <Footer />
+      <CareerBot/>
     </>
   );
 };

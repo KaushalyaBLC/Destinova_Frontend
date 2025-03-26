@@ -1,17 +1,20 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import NavigationBar from "../components/NavigationBar";
 import Typewriter from "typewriter-effect";
 import peekBot from "../assets/botimg/peekbot.gif";
-
 import styles from "./HomePage.module.css"; // Import the CSS module
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
-
 const HomePage = () => {
-    const navigator = useNavigate();
+  const navigator = useNavigate();
   return (
     <>
+      <Helmet>
+        <title>Home - Destinova</title>
+        <meta name="description" content="Chart Your Path to Success with Destinova. Discover personalized career insights, industry trends, and clear pathways tailored to your skills and goals." />
+      </Helmet>
       <section className={styles.hero}>
         <NavigationBar />
         <div className="container d-flex  justify-content-center align-items-center vh-100 ">

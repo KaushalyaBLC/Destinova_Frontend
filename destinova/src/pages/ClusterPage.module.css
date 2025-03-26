@@ -122,7 +122,7 @@ body {
 @media screen and (max-width: 768px) {
   /* Adjusting for smaller screens like tablets and phones */
   .content {
-    margin-top: 10vh; /* Adjusts spacing for smaller screens */
+    margin-top: 15vh; /* Adjusts spacing for smaller screens */
   }
 
   .cluster {

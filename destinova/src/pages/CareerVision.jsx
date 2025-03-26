@@ -22,7 +22,7 @@ const CareerVision = () => {
       </div>
 
       <div className={styles.content}>
-        <div className="container d-flex align-items-center h-100">
+        <div className="container d-lg-flex align-items-center h-100">
           <div className="col-lg-4 ">
             <h3 className="text-danger mb-3">
               Welcome to Career Vision Crystal
@@ -40,13 +40,13 @@ const CareerVision = () => {
             </div>
             <CareerBot/>
           </div>
-          <div className="col-lg-1"></div>
+          <div className="col-lg-1 p-4"></div>
           <div className="col-lg-7">
             <h6 className="text-light text-center">
               - Select a Industry to Explore -
             </h6>
-            <div className="mb-1 text-light d-flex">
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/agriculture")}>
+            <div className="mb-1 text-light d-lg-flex">
+              <div className={`col-lg-4 me-1 mt-1 ${styles.industry}`} onClick={() => navigate("/career-vision/agriculture")}>
                 <h5>Agriculture & Plantation</h5>
                 <p className="py-2">
                   Innovate in agribusiness, sustainable farming, and food
@@ -55,7 +55,7 @@ const CareerVision = () => {
                 <MdOutlineAgriculture size={50} />
               </div>
 
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/apparel")}>
+              <div className={`col-lg-4 me-1 mt-1 ${styles.industry}`} onClick={() => navigate("/career-vision/apparel")}>
                 <h5>Apparel & Textiles</h5>
                 <p className="py-2">
                   {" "}
@@ -63,7 +63,7 @@ const CareerVision = () => {
                 </p>
                 <GiClothes size={50} />
               </div>
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/tourism")}>
+              <div className={`col-lg-4 me-1 mt-1 ${styles.industry}`} onClick={() => navigate("/career-vision/tourism")}>
                 <h5>Tourism & Hospitality</h5>
                 <p className="py-2">
                   Build a career in travel, hotel management, and event
@@ -73,8 +73,8 @@ const CareerVision = () => {
               </div>
             </div>
 
-            <div className=" text-light d-flex">
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/it")}>
+            <div className=" text-light d-lg-flex">
+              <div className={`col-lg-4 me-1 mt-1 ${styles.industry}`} onClick={() => navigate("/career-vision/it")}>
                 <h5>IT & BPM</h5>
                 <p className="py-2">
                   {" "}
@@ -83,7 +83,7 @@ const CareerVision = () => {
                 </p>
                 <FaComputer size={50} />
               </div>
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/manufacturing")}>
+              <div className={`col-lg-4 me-1 mt-1 ${styles.industry}`} onClick={() => navigate("/career-vision/manufacturing")}>
                 <h5>Manufacturing & Industrial</h5>
                 <p className="py-2">
                   {" "}
@@ -91,7 +91,7 @@ const CareerVision = () => {
                 </p>
                 <MdFactory size={50} />
               </div>
-              <div className={`col-4 me-1 ${styles.industry}`} onClick={() => navigate("/career-vision/construction")}>
+              <div className={`col-lg-4 me-1 mt-1  ${styles.industry}`} onClick={() => navigate("/career-vision/construction")}>
                 <h5>Construction & Infrastructure</h5>
                 <p className="py-2">
                   Shape the nation with careers in engineering and urban

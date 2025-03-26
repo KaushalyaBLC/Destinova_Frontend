@@ -19,7 +19,7 @@ const NovaResultDisplay = ({ results }) => {
     <div className="col-lg-8 rounded">
       <div
         className="rounded"
-        style={{ backgroundColor: "rgba(255, 255, 255)" }}
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
       >
         <div className="p-5">
           {results && (
@@ -40,7 +40,7 @@ const NovaResultDisplay = ({ results }) => {
                 <h4>Higher Education</h4>
                 {results.higherEducation?.map((education, index) => (
                   <div key={index} className="my-4">
-                    <div className="bg-light p-3 rounded">
+                    <div className="bg-light p-3 rounded bg-dark">
                       <h5>{education.name}</h5>
                       <p>{education.description}</p>
                       {expandedEducation === index && (
@@ -94,7 +94,7 @@ const NovaResultDisplay = ({ results }) => {
                 <h4>Career Paths</h4>
                 {results.careerPath?.map((career, index) => (
                   <div key={index} className="my-4">
-                    <div className="bg-light p-3 rounded">
+                    <div className="bg-light p-3 rounded bg-dark">
                       <h5>{career.name}</h5>
                       <p>{career.description}</p>
                       {expandedCareer === index && (

@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const NovaResult = (personalData, educationDetails, answers,ip, setResults) => {
   
-    axios.post('http://192.168.150.74:3000/nova', {
+    axios.post('https://destinova-backend.fly.dev/nova', {
         personalData: personalData,
         educationDetails: educationDetails,
         answers: answers,

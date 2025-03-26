@@ -13,7 +13,7 @@ const Industry = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/crystal/industry/${industry}`)
+      .get(`https://destinova-backend.fly.dev/crystal/industry/${industry}`)
       .then((response) => {
         setIndustryData(response.data);
         console.log(response.data);
@@ -28,7 +28,7 @@ const Industry = () => {
         <div className={styles.content}>
           <div className="text-light container">
             {industryData ? (
-              <div className="col-lg-12 d-flex">
+              <div className="col-lg-12 d-lg-flex">
                 <div className="col-lg-6">
                   <h3>{industryData.industry_name}</h3>
                   <p>{industryData.overview.description}</p>
