@@ -121,7 +121,7 @@ const HomePage = () => {
                 Salary Insights & Job Demand | Skills Gap Analysis
               </p>
               <div className="d-flex justify-content-center">
-                <button className="btn btn-danger p-2 px-4 mt-3 ">
+                <button className="btn btn-danger p-2 px-4 mt-3 " onClick={()=>navigator("/career-vision")}>
                   Unveil Your Possibilities
                 </button>
               </div>
@@ -156,7 +156,7 @@ const HomePage = () => {
                 | Certiicate Courses & Diploma Programs
               </p>
               <div className="d-flex justify-content-center">
-                <button className="btn btn-danger p-2 px-4 mt-3 ">
+                <button className="btn btn-danger p-2 px-4 mt-3 " onClick={()=>navigator("/wisdom-gateway")}>
                   Find Your Academic Path
                 </button>
               </div>
@@ -195,7 +195,7 @@ const HomePage = () => {
                 for every Sri Lankan.
               </p>
               <div className="d-flex justify-content-center">
-                <button className="btn btn-danger p-2 px-4 mt-3 ">
+                <button className="btn btn-danger p-2 px-4 mt-3 " onClick={()=>navigator("/")}>
                   See More
                 </button>
               </div>
