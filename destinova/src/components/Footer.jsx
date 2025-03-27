@@ -23,8 +23,8 @@ const Footer = () => {
             <div>
             <h5 className="fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="/careers" className="text-light text-decoration-none">Career Insights</a></li>
-              <li><a href="/networking" className="text-light text-decoration-none">Academic Networking</a></li>
+              <li><a href="/career-vision" className="text-light text-decoration-none">Career Insights</a></li>
+              <li><a href="/wisdom-gateway" className="text-light text-decoration-none">Academic Networking</a></li>
               <li><a href="/about" className="text-light text-decoration-none">About Us</a></li>
               <li><a href="/contact" className="text-light text-decoration-none">Contact</a></li>
             </ul>
