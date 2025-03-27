@@ -1,8 +1,10 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Logo from "../assets/coloredlogo.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-dark text-light pt-4">
       <div className="container text-center text-md-start">
@@ -23,10 +25,9 @@ const Footer = () => {
             <div>
             <h5 className="fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="/career-vision" className="text-light text-decoration-none">Career Insights</a></li>
-              <li><a href="/wisdom-gateway" className="text-light text-decoration-none">Academic Networking</a></li>
-              <li><a href="/about" className="text-light text-decoration-none">About Us</a></li>
-              <li><a href="/contact" className="text-light text-decoration-none">Contact</a></li>
+              <li className="text-light text-decoration-none" onClick={()=>{navigate('/career-vision')}}>Career Insights</li>
+              <li className="text-light text-decoration-none" onClick={()=>{navigate('/meet-nova')}}>Meet Nova</li>
+              <li className="text-light text-decoration-none" onClick={()=>{navigate('/wisdom-gateway')}}>Wisdom Gateway</li>
             </ul>
             </div>
           </div>

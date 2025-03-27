@@ -60,7 +60,7 @@ const Header = () => {
               Career Vision Crystal
             </Nav.Link>
             <Nav.Link as={NavLink} to="/wisdom-gateway" className="nav-link">
-              Academic Networking
+              Wisdom Gateway
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
