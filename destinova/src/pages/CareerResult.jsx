@@ -204,7 +204,6 @@ const CareerResult = () => {
 
       </div>
       <Footer />
-      <CareerBot/>
     </>
   );
 };
