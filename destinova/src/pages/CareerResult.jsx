@@ -40,7 +40,7 @@ const CareerResult = () => {
             <div className="d-flex align-items-center justify-content-center text-center">
               <div>
                 <img src={BotImg} width="300" alt="Loading bot" />
-                <h5>
+                <h6>
                   <Typewriter
                     options={{
                       strings: ["Please Wait....", "Your Career Details are on the way...."],
@@ -50,7 +50,7 @@ const CareerResult = () => {
                       deleteSpeed: 1,
                     }}
                   />
-                </h5>
+                </h6>
               </div>
             </div>
           ) : (
