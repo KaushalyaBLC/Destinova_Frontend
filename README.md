@@ -32,7 +32,7 @@ Ensure you have the following installed:
 ### Clone the Repository
 ```sh
  git clone (https://github.com/KaushalyaBLC/Destinova_Frontend.git)
- cd destinova-frontend
+ cd destinova
 ```
 
 ### Install Dependencies
