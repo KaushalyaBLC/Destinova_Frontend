@@ -43,7 +43,7 @@ const CareerBot = () => {
                   "Hello there...",
                   "Curious about careers? Click me!",
                   "I can tell you about any career.",
-                  "Just ask!"
+                  "Just click on me!"
                 ],
                 autoStart: true,
                 loop: true,
