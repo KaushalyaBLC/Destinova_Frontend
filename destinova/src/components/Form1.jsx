@@ -1,6 +1,7 @@
 import React from "react";
 import WaitingBot from "../assets/botimg/waitingbot.gif";
 import Typewriter from "typewriter-effect";
+import { useNavigate } from "react-router-dom";
 
 const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
   // Handle form changes dynamically
@@ -14,6 +15,8 @@ const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
     console.log("Collected Data:", personalData);
     setFormPage(2); // Move to next form
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -120,7 +123,7 @@ const Form1 = ({ personalData, setPersonalData, setFormPage }) => {
               <button
                 type="button"
                 className="btn btn-danger p-2 px-4 mt-3"
-                onClick={() => setFormPage(0)}
+                onClick={() => {navigate("/meet-nova");}}
               >
                 Back
               </button>
