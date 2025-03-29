@@ -20,7 +20,7 @@ const NovaResultDisplay = ({ results, enoughInformation }) => {
     <div className="col-lg-8 rounded">
       <div className="rounded" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}>
         <div className="p-5">
-          {!enoughInformation ? (
+          {results.enoughInformation!="true" ? (
            <NotEnoughInformation />
           ) : (
             results && (
