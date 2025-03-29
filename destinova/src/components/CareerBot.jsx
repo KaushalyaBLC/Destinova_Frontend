@@ -26,7 +26,7 @@ const CareerBot = () => {
   };
 
   return (
-    <div className="position-fixed bottom-0 start-0 m-3 -3" style={{ zIndex: 1000 }}>
+    <div className="position-fixed bottom-0 start-0 m-3" style={{ zIndex: 1000 }}>
       <div className="container d-flex" style={{ width: "300px" }}>
         <img
           src={BotImg}
@@ -39,12 +39,7 @@ const CareerBot = () => {
           <div className="text-lg font-weight-bold text-light mb-2 bg-primary p-2 rounded">
             <Typewriter
               options={{
-                strings: [
-                  "Hello there...",
-                  "Curious about careers? Click me!",
-                  "I can tell you about any career.",
-                  "Just click on me!"
-                ],
+                strings: ["Click to ask me about any career!"],
                 autoStart: true,
                 loop: true,
                 delay: 75,
@@ -58,13 +53,13 @@ const CareerBot = () => {
               <input
                 type="text"
                 value={career}
+                placeholder="Enter your career"
                 onChange={handleInputChange}
                 className="form-control mb-2"
                 style={{
                   backgroundColor: "black",
                   border: "1px solid #ccc",
                   color: "#FFF",
-                  '::placeholder': { color: '#ccc' }
                 }}
               />
               <button onClick={handleSubmit} className="btn btn-danger">
@@ -74,6 +69,13 @@ const CareerBot = () => {
           )}
         </div>
       </div>
+      <style>
+        {`
+          input::placeholder {
+            color: #6c757d !important;
+          }
+        `}
+      </style>
     </div>
   );
 };

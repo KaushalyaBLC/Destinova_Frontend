@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import CareerBot from "./CareerBot";
+import Loading from "./Loading";
 
 const Industry = () => {
   const { industry } = useParams();
@@ -26,7 +27,7 @@ const Industry = () => {
       <div className={styles[industryData?.industry]}>
         <NavigationBar />
         <div className={styles.content}>
-          <div className="text-light container">
+          <div className="text-light container pb-3">
             {industryData ? (
               <div className="col-lg-12 d-lg-flex">
                 <div className="col-lg-6">
@@ -96,7 +97,7 @@ const Industry = () => {
                 </div>
               </div>
             ) : (
-              <p>Loading...</p>
+              <Loading />
             )}
           </div>
         </div>

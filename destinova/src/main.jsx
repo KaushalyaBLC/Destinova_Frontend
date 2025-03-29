@@ -18,6 +18,8 @@ import Industry from './components/Industry.jsx';
 import ClusterPage from './pages/ClusterPage.jsx';
 import WisdomGateway from './pages/WisdomGateway.jsx';
 import CareerResult from './pages/CareerResult.jsx';
+import 'aos/dist/aos.css';
+
 
 const router = createBrowserRouter([
   {

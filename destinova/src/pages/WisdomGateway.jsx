@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import styles from "./WisdomGateway.module.css";
-
+import AOS from "aos";
 const WisdomGateway = () => {
+  useEffect(() => {
+         AOS.init({
+              duration: 1000, // You can set the duration of animations here
+              easing: "ease-in-out", // Define easing type (optional)
+              once: false, // Whether animation should happen only once
+            });
+          }, []);
   return (
     <>
       <NavigationBar />
       <div className={styles.wisdom}>
         <div className="container pt-4">
           <div className={styles.content}>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center" data-aos="zoom-in">
               {[{
                 title: "State Universities",
                 link: "https://www.ugc.ac.lk/",

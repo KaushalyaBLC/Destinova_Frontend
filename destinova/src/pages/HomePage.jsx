@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import NavigationBar from "../components/NavigationBar";
 import Typewriter from "typewriter-effect";
@@ -6,9 +6,19 @@ import peekBot from "../assets/botimg/peekbot.gif";
 import styles from "./HomePage.module.css"; // Import the CSS module
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos"; // Import AOS
+
 
 const HomePage = () => {
   const navigator = useNavigate();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // You can set the duration of animations here
+      easing: "ease-in-out", // Define easing type (optional)
+      once: false, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -17,8 +27,8 @@ const HomePage = () => {
       </Helmet>
       <section className={styles.hero}>
         <NavigationBar />
-        <div className="container d-flex  justify-content-center align-items-center vh-100 ">
-          <div className="text-light text-center">
+        <div className="container d-flex  justify-content-center align-items-center vh-100 " >
+          <div className="text-light text-center" data-aos="zoom-in">
             <h1 className="p-3">
               Chart Your Path to Success with{" "}
               <span className="text-danger">Destinova</span>
@@ -50,7 +60,7 @@ const HomePage = () => {
               guide you every step of the way
             </p>
 
-            <button className="btn btn-danger p-2 px-4">Get Started</button>
+            {/* <button className="btn btn-danger p-2 px-4">Get Started</button> */}
           </div>
         </div>
       </section>
@@ -60,8 +70,9 @@ const HomePage = () => {
           <div
             className=" p-5 rounded-3 col-lg-6"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Reduced opacity only for the background
+                  data-aos="fade-right"
           >
-            <div className="text-center">
+            <div className="text-center ">
               <h2 className="text-danger text-center">
                 Unlock Your True Potential With{" "}
                 <span className="text-warning">Nova</span>
@@ -102,6 +113,7 @@ const HomePage = () => {
           <div
             className=" p-5 rounded-3 col-lg-6"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Reduced opacity only for the background
+             data-aos="fade-left"
           >
             <div className="">
               <h2 className="text-danger text-center">
@@ -135,6 +147,7 @@ const HomePage = () => {
           <div
             className=" p-5 rounded-3 col-lg-6"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Reduced opacity only for the background
+            data-aos="fade-right"
           >
             <div className="">
               <h2 className="text-danger text-center">
@@ -170,6 +183,7 @@ const HomePage = () => {
           <div
             className=" p-5 rounded-3 col-lg-8"
             style={{ backgroundColor: "rgba(23, 14, 14, 0.73)" }} // Reduced opacity only for the background
+            data-aos="fade-up"
           >
             <div className="">
               <h2 className="text-danger text-center">About Us</h2>

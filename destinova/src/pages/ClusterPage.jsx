@@ -6,6 +6,7 @@ import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import CareerBot from "../components/CareerBot";
 import { Nav } from "react-bootstrap";
+import Loading from "../components/Loading";
 
 const ClusterPage = () => {
   const { cluster } = useParams();
@@ -34,7 +35,7 @@ const ClusterPage = () => {
       <>
         <NavigationBar />
         <div className={`${styles.content} container`}>
-          <p>Loading...</p>
+          <Loading />
         </div>
         <Footer />
       </>

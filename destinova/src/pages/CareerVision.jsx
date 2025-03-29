@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useEffect } from "react";
 import styles from "./CareerVision.module.css";
 import NavigationBar from "../components/NavigationBar";
 import { FaArrowRight } from "react-icons/fa";
@@ -11,9 +11,17 @@ import { IoIosConstruct } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import CareerBot from "../components/CareerBot";
+import AOS from "aos";
 
 const CareerVision = () => {
     const navigate = useNavigate();
+    useEffect(() => {
+       AOS.init({
+            duration: 1000, // You can set the duration of animations here
+            easing: "ease-in-out", // Define easing type (optional)
+            once: false, // Whether animation should happen only once
+          });
+        }, []);
   return (
     <>
     <div className={styles.page}>
@@ -22,8 +30,8 @@ const CareerVision = () => {
       </div>
 
       <div className={styles.content}>
-        <div className="container d-lg-flex align-items-center h-100">
-          <div className="col-lg-4 ">
+        <div className="container d-lg-flex align-items-center h-100 pb-3">
+          <div className="col-lg-4 "data-aos="fade-right">
             <h3 className="text-danger mb-3">
               Welcome to Career Vision Crystal
             </h3>
@@ -38,10 +46,10 @@ const CareerVision = () => {
               <p className="my-auto me-2">Select an Industry to Explore</p>
               <FaArrowRight />
             </div>
-            <CareerBot/>
+            
           </div>
           <div className="col-lg-1 p-4"></div>
-          <div className="col-lg-7">
+          <div className="col-lg-7" data-aos="fade-left">
             <h6 className="text-light text-center">
               - Select a Industry to Explore -
             </h6>
@@ -104,6 +112,7 @@ const CareerVision = () => {
         </div>
       </div>
     </div>
+    <CareerBot/>
     <Footer />
     </>
   );

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./NovaPage.module.css";
 import NovaBot from "../assets/botimg/bot.gif";
 import NavigationBar from "../components/NavigationBar.jsx";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-
+import AOS from "aos";
 
 const NovaPage = () => {
   const navigator = useNavigate();
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // You can set the duration of animations here
+        easing: "ease-in-out", // Define easing type (optional)
+        once: false, // Whether animation should happen only once
+      });
+    }, []);
   return (
+
     <>
   
     <div className={style.novapage}>
@@ -21,6 +29,7 @@ const NovaPage = () => {
           <div
             className=" p-5 rounded-3 col-lg-8"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Reduced opacity only for the background
+             data-aos="fade-left"
           >
             <div className="">
               <h2 className="text-danger text-center">
@@ -48,7 +57,7 @@ const NovaPage = () => {
               </div>
             </div>
           </div>
-           <div className="col-lg-4  d-flex justify-content-center align-items-center">
+           <div className="col-lg-4  d-flex justify-content-center align-items-center" data-aos="zoom-in">
             <img src={NovaBot} width={300} />
           </div>
         </div>
