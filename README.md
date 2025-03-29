@@ -31,7 +31,7 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```sh
- git clone https://github.com/your-username/destinova-frontend.git
+ git clone [https://github.com/your-username/destinova-frontend.git](https://github.com/KaushalyaBLC/Destinova_Frontend.git)
  cd destinova-frontend
 ```
 
