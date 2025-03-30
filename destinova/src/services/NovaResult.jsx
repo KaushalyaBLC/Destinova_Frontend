@@ -7,6 +7,7 @@ const NovaResult = (personalData, educationDetails, answers,ip, setResults) => {
         personalData: personalData,
         educationDetails: educationDetails,
         answers: answers,
+        ip:ip
        
     }).then((response) => {
         setResults(response.data)
