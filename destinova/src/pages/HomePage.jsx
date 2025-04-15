@@ -23,7 +23,8 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Home - Destinova</title>
-        <meta name="description" content="Chart Your Path to Success with Destinova. Discover personalized career insights, industry trends, and clear pathways tailored to your skills and goals." />
+        <meta name="description" content="Chart your path to success with Destinova. Discover personalized career insights, industry trends, and clear pathways tailored to your skills and goals." />
+        <meta name="keywords" content="career guidance, AI, education, job market, skills, future, Sri Lanka" />
       </Helmet>
       <section className={styles.hero}>
         <NavigationBar />

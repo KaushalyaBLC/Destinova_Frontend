@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://destinova.live/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/meet-nova</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/meet-nova/form</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/career-vision</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/career-vision/:industry</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/career-vision/industry/:cluster</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/career-vision/career/:career</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://destinova.live/wisdom-gateway</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
